@@ -1,0 +1,33 @@
+
+<mat-card-content class="card-content">
+    <form class="my-form" (ngSubmit)="register(user)" [formGroup]="form">
+       <mat-form-field class="full-width" appearance="outline" >
+              <mat-label>Nom</mat-label>
+              <input  matInput  placeholder="Nom"  name="nom"  required [(ngModel)]="user.nom" class="form-control" formControlName="nom">
+           </mat-form-field>
+           <mat-form-field class="full-width" appearance="outline">
+              <mat-label>Prénom</mat-label>
+              <input  matInput  placeholder="Prenom" name="prenom"  required [(ngModel)]="user.prenom" class="form-control" formControlName="prenom"> 
+           </mat-form-field>
+           <mat-form-field class="full-width" appearance="outline">
+              <mat-label>Nom utilisateur</mat-label>
+              <input  matInput  placeholder="Utilisateur" name="utilisateur"  required [(ngModel)]="user.utilisateur" class="form-control" formControlName="utilisateur">
+           </mat-form-field>
+           <mat-form-field class="full-width" appearance="outline">
+              <mat-label>Adresse</mat-label>
+              <input  matInput  placeholder="Adresse" name="adresse" class="form-control" [(ngModel)]="user.adresse" formControlName="utilisateur">
+           </mat-form-field>
+           <mat-form-field class="full-width" appearance="outline">
+            <mat-label>Téléphone</mat-label>
+            <input  matInput  placeholder="Telephone" name="telephone" class="form-control" [(ngModel)]="user.telephone" formControlName="utilisateur">
+         </mat-form-field>
+         <mat-form-field class="full-width" appearance="outline">
+            <mat-label>Mot de passe</mat-label>
+            <input  matInput  placeholder="Mot de passe" type="password" name="motdepasse" required [(ngModel)]="user.motdepasse" class="form-control" formControlName="motdepasse">
+         </mat-form-field>
+           <mat-card-actions>
+            <div *ngIf="show" class="errorMessage">Nom d'utilisateur non valide, veuillez choisir un autre nom.</div>
+            <input class="mat-raised-button" color="primary" type="submit" color="primary" value="S'inscrire" [disabled]="!form.valid"/>
+          </mat-card-actions>
+    </form>
+  </mat-card-content>

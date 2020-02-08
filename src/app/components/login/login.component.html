@@ -1,0 +1,23 @@
+
+     <mat-card-content class="card-content" >
+        <form class="my-form" (ngSubmit)="login(user)" [formGroup]="form">
+           <mat-form-field class="full-width" appearance="outline">
+              <mat-label>Nom d'utilisateur</mat-label>
+              <input  matInput placeholder="utilisateur" required [(ngModel)]="user.utilisateur" class="form-control" formControlName="utilisateur">
+           </mat-form-field>
+           
+           <mat-error *ngIf="hasError('utilisateur','required') && (utilisateur?.pristine)"[hidden]="">Champs Utilisateur est obligatoire *</mat-error>
+           <mat-form-field class="full-width" appearance="outline">
+              <mat-label>Mot de passe</mat-label>
+              <input  matInput  type="password" placeholder="mot de passe" required [(ngModel)]="user.motdepasse" class="form-control" formControlName="motdepasse">
+           
+            </mat-form-field>
+          <mat-error *ngIf="hasError('motdepasse','required') && motdepasse?.dirty">Champs mot de passe est obligatoire *</mat-error>
+         <mat-card-actions>
+            <div *ngIf="show" class="errorMessage">Nom d'utilisateur ou Mot de passe incorrecte.</div>
+         
+        <input class="mat-raised-button" type="submit" color="primary" value="Se connecter" [disabled]="!form.valid" />
+     </mat-card-actions>
+   </form>
+   </mat-card-content>
+

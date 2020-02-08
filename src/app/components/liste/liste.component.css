@@ -1,0 +1,38 @@
+table {
+    width: 70%;
+    margin-left: 170px;
+  }
+  
+  .mat-form-field {
+    font-size: 14px;
+    width: 70%;
+    margin-left: 170px;
+  }
+  .button{
+      background-color:#2C86ED;
+      margin-top: 5px;
+      color: white;
+  }
+  .buttonCell{
+      width:15px;
+  }
+  .cell{
+      width:100px;
+  }
+  .buttonSupp{
+      margin-left: 5px;
+      background-color:#C71919;
+      color: white;
+      margin-top: 5px;
+
+  }
+  .nomInput{
+      padding-left: 15px;
+  }
+  .details{
+    margin-top: 50px;
+    border-style: groove;
+    width: 25%;
+    margin-left: 170px;
+    padding-left: 20px;
+  }
